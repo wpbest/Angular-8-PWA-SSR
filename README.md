@@ -151,6 +151,46 @@ UPDATE angular.json (4325 bytes)
 UPDATE src/main.ts (432 bytes)
 UPDATE src/app/app.module.ts (649 bytes)
 ```
+## SEO (Search Engine optimization)
+
+Create the file robots.txt to the src folder and create the text
+
+```
+User-agent: *
+Allow: /
+```
+Create the file sitemap.xml to the src folder and create the text
+
+```
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+   <url>
+      <loc>localhost:4000/</loc>
+      <lastmod>2019-06-30</lastmod>
+      <changefreq>always</changefreq>
+      <priority>1.0</priority>
+   </url>
+</urlset>
+```
+
+Modify angular.json and add "src/robots.txt" and "src/sitemap.xml" in tha assets,
+
+```
+            "assets": [
+              "src/favicon.ico",
+              "src/assets",
+              "src/robots.txt",
+              "src/sitemap.xml,
+              "src/manifest.webmanifest"
+            ],
+```
+
+Add the meta data in the ```<head>``` section in the intex.html file in the src folder:
+
+```
+  <meta name="description" content="This is a meta description sample. We can add up to 160 characters.">
+```
+
 ### Add needed packages only if using Firebase
 
 ws: a Node.js WebSocket library
