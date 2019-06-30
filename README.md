@@ -4,11 +4,10 @@ Angular 8 Progressive Web Application with Server Side Rendering. ng8pwassrtempl
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 8.0.6.
 
-## Install global packages: Angular CLI, TypeScript, Firebase Tools
+## Install global packages: Angular CLI
 
 ```
 npm install -g @angular/cli  
-npm install -g firebase-tools  
 ```
 ## common ng new command switches
 
