@@ -133,6 +133,13 @@ npm install ws xhr2 bufferutil utf-8-validate  --save-dev
 
 Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
 
+## Run Angular Client and Express Server `http://localhost:4000/`.
+
+```
+npm run build:ssr
+npm run serve:ssr
+```
+
 ## Development server
 
 Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
