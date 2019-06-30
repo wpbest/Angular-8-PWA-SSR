@@ -75,6 +75,41 @@ CREATE ng8pwassrtemplate/e2e/src/app.e2e-spec.ts (646 bytes)
 CREATE ng8pwassrtemplate/e2e/src/app.po.ts (251 bytes)
 ```
 
+### Using Ivy Render Engine
+
+### Disable Ivy! Not working in Server Side Rendering.
+
+In the angularCompilerOptions in your project's tsconfig.app.json.
+
+```
+{
+  "compilerOptions": { ... },
+  "angularCompilerOptions": {
+    "enableIvy": false
+  }
+}
+```
+
+AOT compilation with Ivy is faster and should be used by default. In the angular.json workspace configuration file, set the default build options for your project to always use AOT compilation.
+
+```
+{
+  "projects": {
+    "ng8template": {
+      "architect": {
+        "build": {
+          "options": {
+            ...
+            "aot": true,
+            ...
+          }
+        }
+      }
+    }
+  }
+}
+```
+
 ### Adding a service worker to your project (PWA)
 
 [Getting started with service workers](https://angular.io/guide/service-worker-getting-started)
