@@ -1,4 +1,4 @@
-FROM node:current
+FROM node:current-alpine as build
 WORKDIR /app
 ENV PATH /app/node_modules/.bin:$PATH
 COPY package.json /app/package.json
@@ -7,5 +7,8 @@ RUN npm install
 RUN npm install -g @angular/cli
 COPY . /app
 RUN npm run build:ssr
-EXPOSE 4000
-CMD ["npm", "run", "serve:ssr"]
+FROM node:current-alpine
+WORKDIR /app
+COPY --from=build /app/dist ./dist
+EXPOSE 3000
+CMD ["node", "dist/server.js"]

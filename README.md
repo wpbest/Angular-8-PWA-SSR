@@ -165,7 +165,7 @@ Create the file sitemap.xml to the src folder and create the text
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
    <url>
-      <loc>localhost:4000/</loc>
+      <loc>localhost/</loc>
       <lastmod>2019-06-30</lastmod>
       <changefreq>always</changefreq>
       <priority>1.0</priority>
@@ -207,7 +207,7 @@ npm install ws xhr2 bufferutil utf-8-validate  --save-dev
 
 Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
 
-## Run Angular Client and Express Server `http://localhost:4000/`.
+## Run Angular Client and Express Server `http://localhost/`.
 
 ```
 npm run build:ssr
