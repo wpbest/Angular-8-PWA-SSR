@@ -1,0 +1,15 @@
+version: '2.3'
+services:
+  angular:
+    hostname: localhost
+    build: 
+      context: .
+      dockerfile: Dockerfile-Browser
+    ports:
+      - 80:80
+  express:
+    build: 
+      context: .
+      dockerfile: Dockerfile-Server
+    ports:
+      - "4000:4000"

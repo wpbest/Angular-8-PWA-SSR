@@ -1,0 +1,11 @@
+version: '2.3'
+services:
+  angular:
+    hostname: localhost
+    build: ./Dockerfile-browser
+    ports:
+      - 80:80
+  express:
+    build: ./Dorckerfile-server
+    ports:
+      - "4000:4000"
